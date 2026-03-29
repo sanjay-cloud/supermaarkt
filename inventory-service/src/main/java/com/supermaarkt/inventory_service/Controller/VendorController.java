@@ -1,4 +1,4 @@
-package com.supermaarkt.inventory_service.Controller;
+package com.supermaarkt.inventory_service.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.supermaarkt.inventory_service.Entity.Vendor;
-import com.supermaarkt.inventory_service.Service.VendorService;
+import com.supermaarkt.inventory_service.entity.Vendor;
+import com.supermaarkt.inventory_service.service.VendorService;
 
 @Controller
 @RequestMapping("/vendors")

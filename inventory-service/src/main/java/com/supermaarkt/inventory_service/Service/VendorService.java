@@ -1,12 +1,12 @@
-package com.supermaarkt.inventory_service.Service;
+package com.supermaarkt.inventory_service.service;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.supermaarkt.inventory_service.Entity.Vendor;
-import com.supermaarkt.inventory_service.Repository.VendorRepository;
+import com.supermaarkt.inventory_service.entity.Vendor;
+import com.supermaarkt.inventory_service.repository.VendorRepository;
 
 @Service
 public class VendorService {

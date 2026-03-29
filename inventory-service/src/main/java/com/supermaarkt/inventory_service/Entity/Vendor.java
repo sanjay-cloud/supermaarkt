@@ -1,4 +1,4 @@
-package  com.supermaarkt.inventory_service.Entity;
+package  com.supermaarkt.inventory_service.entity;
 
 import java.time.LocalDateTime;
 
