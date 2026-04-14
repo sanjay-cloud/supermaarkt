@@ -1,1 +1,4 @@
-GET http://localhost:8080/api/v1/inventory/1
+POST http://localhost:8080/api/v1/inventory/billInvoice
+Content-Type: application/json
+
+["2368714", "1", "2313456", "2313457", "2368714"]

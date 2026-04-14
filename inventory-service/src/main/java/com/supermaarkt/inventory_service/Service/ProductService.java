@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.supermaarkt.inventory_service.entity.Product;
-import com.supermaarkt.inventory_service.repository.ProductRepository;
+import com.supermaarkt.inventory_service.repository.postgres.ProductRepository;
 
 @Service
 public class ProductService {
@@ -22,4 +22,5 @@ public class ProductService {
         Optional<Product> product = productRepository.findById(id);
         return product.get();
     }
+
 }

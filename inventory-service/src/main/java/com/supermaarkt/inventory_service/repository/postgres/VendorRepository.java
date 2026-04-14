@@ -1,4 +1,4 @@
-package com.supermaarkt.inventory_service.repository;
+package com.supermaarkt.inventory_service.repository.postgres;
 
 
 

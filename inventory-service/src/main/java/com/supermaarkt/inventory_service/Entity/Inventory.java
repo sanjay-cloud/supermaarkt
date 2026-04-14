@@ -1,5 +1,6 @@
 package com.supermaarkt.inventory_service.entity;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.CreatedDate;
@@ -29,7 +30,7 @@ public class Inventory {
     private Product product;
 
     @Column(nullable = false)
-    private int stock;
+    private BigDecimal stock;
 
     @Column(nullable = false)
     private int minStock;

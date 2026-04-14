@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.supermaarkt.inventory_service.entity.Vendor;
-import com.supermaarkt.inventory_service.repository.VendorRepository;
+import com.supermaarkt.inventory_service.repository.postgres.VendorRepository;
 
 @Service
 public class VendorService {
