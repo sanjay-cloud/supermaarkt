@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.supermaarkt.inventory_service.entity.Inventory;
+import com.supermaarkt.inventory_service.entity.postgres.Inventory;
 import com.supermaarkt.inventory_service.repository.postgres.projection.PriceStockView;
 
 public interface InventoryRepository extends JpaRepository<Inventory, Long>{

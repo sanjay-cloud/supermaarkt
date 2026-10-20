@@ -11,9 +11,9 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.supermaarkt.inventory_service.entity.Inventory;
-import com.supermaarkt.inventory_service.entity.Invoice;
-import com.supermaarkt.inventory_service.entity.InvoiceItem;
+import com.supermaarkt.inventory_service.entity.mongo.Invoice;
+import com.supermaarkt.inventory_service.entity.postgres.Inventory;
+import com.supermaarkt.inventory_service.entity.postgres.InvoiceItem;
 import com.supermaarkt.inventory_service.repository.postgres.InventoryRepository;
 import com.supermaarkt.inventory_service.repository.postgres.projection.PriceStockView;
 
@@ -28,6 +28,9 @@ public class InventoryService {
     @Autowired
     private InvoiceService invoiceService;
 
+    @Autowired
+    private PaymentProducer paymentProducer;
+
     public Inventory findById(Long id){
         Optional<Inventory> item = inventoryRepository.findById(id);
         return item.get();
@@ -40,6 +43,7 @@ public class InventoryService {
         Invoice invoice = calculateBill(barcodeMap, prices);
         invoiceService.storeInvoice(invoice);
         updateInventoryStock(barcodeMap);
+        // paymentProducer.sendPaymentRequest(invoice);
         return invoice;
     }
 

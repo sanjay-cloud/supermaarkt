@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.supermaarkt.inventory_service.entity.Inventory;
-import com.supermaarkt.inventory_service.entity.Invoice;
+import com.supermaarkt.inventory_service.entity.mongo.Invoice;
+import com.supermaarkt.inventory_service.entity.postgres.Inventory;
 import com.supermaarkt.inventory_service.service.InventoryService;
 
 @RestController

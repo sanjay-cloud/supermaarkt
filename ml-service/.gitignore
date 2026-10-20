@@ -1,0 +1,41 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Packaging/build output
+build/
+dist/
+*.egg-info/
+
+# Generated RAG data
+data/db/
+data/chunks/
+dummy/
+
+# Model and library caches
+.cache/
+models/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

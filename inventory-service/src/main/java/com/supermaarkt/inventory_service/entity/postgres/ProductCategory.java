@@ -1,4 +1,4 @@
-package com.supermaarkt.inventory_service.entity;
+package com.supermaarkt.inventory_service.entity.postgres;
 
 import java.time.LocalDateTime;
 

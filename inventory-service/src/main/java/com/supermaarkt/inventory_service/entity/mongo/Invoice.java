@@ -1,4 +1,4 @@
-package com.supermaarkt.inventory_service.entity;
+package com.supermaarkt.inventory_service.entity.mongo;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.supermaarkt.inventory_service.entity.postgres.InvoiceItem;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

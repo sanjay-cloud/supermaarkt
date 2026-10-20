@@ -1,10 +1,9 @@
-package com.supermaarkt.inventory_service.entity;
+package  com.supermaarkt.inventory_service.entity.postgres;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import jakarta.persistence.Column;
@@ -12,34 +11,32 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import lombok.Data;
 
-@Data
 @Entity
+@Data
 @EntityListeners(AuditingEntityListener.class)
-public class Inventory {
+@Table(name="vendors")
+public class Vendor{
 
     @Id
     @GeneratedValue
     private Long id;
-    
-    @ManyToOne
-    @JoinColumn(name="product_barcode")
-    private Product product;
 
     @Column(nullable = false)
-    private BigDecimal stock;
+    private String name;
 
-    @Column(nullable = false)
-    private int minStock;
+    @Column(unique = true)
+    private String contact;
 
-    @CreatedDate
+    private String address;
+
     @Column(name = "created_at", updatable = false)
+    @CreatedDate
     private LocalDateTime createdAt;
 
-    @LastModifiedBy
     @Column(name = "updated_at")
+    @LastModifiedDate
     private LocalDateTime updatedAt;
 }

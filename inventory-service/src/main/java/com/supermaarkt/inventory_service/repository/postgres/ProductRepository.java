@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.supermaarkt.inventory_service.entity.Product;
+import com.supermaarkt.inventory_service.entity.postgres.Product;
 
 public interface ProductRepository extends JpaRepository<Product, String>{
     

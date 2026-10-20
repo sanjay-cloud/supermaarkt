@@ -53,3 +53,4 @@ build/
 *.zip
 *.tar.gz
 *.rar
+*.http

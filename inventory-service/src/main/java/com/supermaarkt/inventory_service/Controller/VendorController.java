@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.supermaarkt.inventory_service.entity.Vendor;
+import com.supermaarkt.inventory_service.entity.postgres.Vendor;
 import com.supermaarkt.inventory_service.service.VendorService;
 
 @Controller

@@ -5,7 +5,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.supermaarkt.inventory_service.entity.Product;
+import com.supermaarkt.inventory_service.entity.postgres.Product;
 import com.supermaarkt.inventory_service.repository.postgres.ProductRepository;
 
 @Service
