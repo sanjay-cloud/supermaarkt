@@ -31,6 +31,8 @@ public class Invoice {
         for(InvoiceItem item : invoiceItems){
             total = total.add(item.getTotal());
         }
+        this.dateTime = LocalDateTime.now();
+
         this.grandTotal = total;
     }
 }

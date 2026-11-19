@@ -33,6 +33,8 @@ models/
 # Logs and temporary files
 *.log
 *.tmp
+/data/raw/
+/data/processed/
 
 # IDE and operating-system files
 .vscode/

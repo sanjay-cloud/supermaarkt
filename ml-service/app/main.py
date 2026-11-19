@@ -5,9 +5,11 @@ from langchain_chroma import Chroma
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 from app.api.agent import router as agent_router
+from app.api.analytics import router as analytics_router
 
 app = FastAPI()
 app.include_router(agent_router)
+app.include_router(analytics_router)
 from app.chatbot.retriever import Retriever
 embedding_model = GPT4AllEmbeddings(model_name="all-MiniLM-L6-v2.gguf2.f16.gguf", gpt4all_kwargs={'allow_download':'True'})
 api_key = os.getenv('GEMINI_API_KEY')
